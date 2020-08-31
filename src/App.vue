@@ -30,7 +30,7 @@
               <em>User</em>
             </template>
             <b-dropdown-item :to="{name:'perfil'}">Profile</b-dropdown-item>
-            <b-dropdown-item :to="{name:'login'}">Sign Out</b-dropdown-item>
+            <b-dropdown-item :to="{name:'login'}">Sign In</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>

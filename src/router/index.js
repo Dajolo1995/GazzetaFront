@@ -8,26 +8,30 @@ import Perfil from '../views/ingreso/Perfil.vue'
 import Prueba from '../views/ingreso/Prueba.vue'
 
 import conPlastilina from '../views/subPlastilina/conPlastilina.vue'
-import plastilinaUno from '../views/subPlastilina/plastilinaUno.vue'
-import obras from '../views/subPlastilina/obras.vue'
+import plastilinaUno from '../views/subPlastilina/niña-emily/plastilinaUno.vue'
+import Plastilina from '../views/subPlastilina/niña-emily/Plastilina.vue'
+//import obras from '../views/subPlastilina/obras.vue'
 import Menor from '../views/subPlastilina/Menor.vue'
 import Ikkaros from '../views/subPlastilina/Ikkaros.vue'
 
 import Elchupo from '../views/botandoelchupo/Elchupo.vue'
 import chupo from '../views/botandoelchupo/chupo.vue'
 
+/** LOS NADIE */
 import Editoriales from '../views/losNadie/Editoriales.vue'
 import Bolita from '../views/losNadie/Bolita.vue'
 import Emily from '../views/losNadie/Emily.vue'
+import Podscat from '../views/losNadie/Podscat.vue'
+import Invitados from '../views/losNadie/Invitados.vue'
+
 
 import laPueta from '../views/SupPueta/laPueta.vue'
 import Memes from '../views/SupPueta/Memes.vue'
 
-import Podscat from '../views/losNadie/Podscat.vue'
+
 import store from "../store"
 import PaymentSuccess from '../views/payments/PaymentSuccess.vue'
 
-import Invitados from '../views/losNadie/Invitados.vue'
 
 // import Lita from '../views/subPlastilina/Lita.vue'
 
@@ -124,11 +128,10 @@ const router = new VueRouter({
       name: 'memes',
       component: Memes
     },
-
     {
-      path: 'La-Niña-Emily/:index',
-      name: "obras",
-      component: obras
+      path: '/La-Niña-Emily/:id',
+      name: "niña-emily",
+      component: Plastilina
     },
     {
       path: '/perfil',

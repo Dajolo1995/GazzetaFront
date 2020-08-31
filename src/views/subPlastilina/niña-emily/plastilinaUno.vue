@@ -39,7 +39,7 @@
             <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoOnce}}</p>          
             <strong class="nombre" style="color: #F65000;">La niña Emily</strong>
             <br> 
-            <b-btn variant="success" :to="{name:'obras', params: {index: Plastilina.titulo}}">leer</b-btn>     
+            <b-btn variant="success" :to="{name:'niña-emily', params: {id: Plastilina._id}}">leer</b-btn>  
             <hr>     
          </div>
         </div>
@@ -65,6 +65,10 @@ export default {
       try {
         const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/plastilina/list`);
         this.Plastilinas = res.data;
+
+      console.clear();
+        console.log(res.data);
+
       } catch (error) {
         console.error(error.response);
         this.error = error.response.data;
