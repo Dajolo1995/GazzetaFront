@@ -15,7 +15,7 @@
                 <b-button v-b-modal.modal-44 variant="outline-info" >Informacion</b-button>
                     <b-modal id="modal-44" title="La Pue´tta" >
                         <p class="my-4">Tienes un evento cultural en el caribe colombiano. Nosototro lo publicamos</p>
-                        <p class="my-4">Escribenos en : <strong>losnadie@gazzettalosnadie27oct.com</strong></p>               
+                        <p class="my-4">Escribenos en : <strong>: losnadiedela27deoctubre@gmail.com</strong></p>               
                     </b-modal>
               </div>
         </div>
