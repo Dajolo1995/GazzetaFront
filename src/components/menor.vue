@@ -1,23 +1,27 @@
 <template>
-  <div class="container editorial">  
+  <div class="container editorial">
     <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-3">
-    <b-card class="ediEstilos"
-       style="max-width: 22rem;" >
-       <p class="cp">Editorial</p>
-      <img src="@/assets/otra.png" alt="">
-      <b-card-text>
-      <br>
-      <h5 class="cp">{{editorial.titulo}}</h5>
-      <b-btn variant="link" :to="{name:'editoriales'}" style="color:#000;" >[[Leer...]]</b-btn>
-      <hr>       
-      </b-card-text>
-    </b-card>
-    </div>
 
-        </div>  
-    </div>
+    <!-- Columnistas uno-->
+      <div class="col-sm-6 col-md-6 col-lg-3">
+      <div class="estilosMenor">
+        <b-card
+          style="max-width: 20rem; background-color: #b5c1d9;"
+          class="mb-2 uno">
+            <img class="plastilinaCon" src="@/assets/menor.jpg" alt="" width="200">            
+            <h5 class="cp">{{editorial.titulo}}</h5>
+            <hr>
+            <b-btn variant="link" :to="{name:'menor'}" style="color:#000;" >[[Leer...]]</b-btn>
+
+            </b-card>
+      </div>
+      
+        </div>
+
+    </div>  
+  </div> 
 </template>
+
 
 <script>
 import { mapState, mapMutations } from "vuex";
@@ -36,7 +40,7 @@ export default {
     async getEditoriales() {
       try {
         const res = await axios.get(
-          `${process.env.VUE_APP_RUTA_API}/editor/list`
+          `${process.env.VUE_APP_RUTA_API}/menor/list`
         );
         console.log(res.data);
         this.setEditoriales(res.data);
@@ -88,4 +92,3 @@ img{
     text-align: left;
 }
 </style>
-

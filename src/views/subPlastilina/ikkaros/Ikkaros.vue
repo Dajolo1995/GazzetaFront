@@ -1,77 +1,71 @@
-
 <template>
   <div class="container editorial">
     <div class="row">
       <div class="col-md-12">
-        <h3 class="pestaña">Editorial</h3>
+        <h3 class="pestaña">Con Plastilina</h3>
       </div>
     </div>
     
-    <div  v-for="(Editoriale, index) in Editoriales" :key="index">   
-      <div class="row">
-        <div class="col-md-2 editor">
-          <div class="foto">
-          <img class="imagen" src="@/assets/otra.png" alt="">
-          </div>    
-        </div>
-      </div>
+
+    
+    <div  v-for="(Plastilina, index) in Plastilinas" :key="index">   
 
       <div class="row">
-        <div class="col-md-12 editor">
+        <div class="col-md-4 editor">
+          <div class="foto">
+            <img class="plastilinaCon" src="@/assets/ika.png" alt="" width="200">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 editor">
           <div class="tex">
-          
-            <h4 class="tittle">{{Editoriale.titulo}}</h4> 
-            <br>                    
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafo}}</p>    
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoDos}}</p>    
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafotres}}</p>  
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoCuatro}}</p>    
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafocinco}}</p>    
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoSeis}}</p>   
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoSiete}}</p>    
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoOcho}}</p>   
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoNueve}}</p>  
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoDiez}}</p>   
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Editoriale.parrafoOnce}}</p> 
-            <strong class="nombre" style="color: #F65000;">{{Editoriale.autor}}</strong>  
-            <hr>    
+          <br>
+            <b-btn variant="link" :to="{name:'ikaros', params: {id: Plastilina._id}}" style="color:#000;"><h4 class="tittle">{{Plastilina.titulo}}</h4> </b-btn> 
+            <br/>                   
+            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}} <b-btn variant="link" :to="{name:'ikaros', params: {id: Plastilina._id}}" style="color:#000;">[[Leer mas...]]</b-btn> </p>
+            <hr>     
          </div>
         </div>
       </div>
-
-    </div>  
+    </div>
   </div>
 </template>
 
-
 <script>
+
 import axios from 'axios';
+
 export default {
   data() {
     return {
-      Editoriales: [],
-      error: '',
-      hola:'youtube.com'
+      Plastilinas: [],
+      error: ''
     }
   },
-  methods: {         
-    async getEditoriales(){
+
+  methods: {
+    async getPlastilinas(){
       try {
-        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/editor/list`);
-        this.Editoriales = res.data;
+        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/ikkaros/list`);
+        this.Plastilinas = res.data;
+
+      console.clear();
+        console.log(res.data);
+
       } catch (error) {
         console.error(error.response);
         this.error = error.response.data;
       }
     },
+    
   },
+
   mounted() {
-    this.getEditoriales();
+    this.getPlastilinas();
   },
 }
 </script>
-
-
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
@@ -105,10 +99,10 @@ export default {
 }
 .editor{
   overflow: hidden;
-  margin-bottom: 10px;
+
 }
 .imagen{
-  max-width: 100px;
+  max-width: 300px;
   width:100%;
   vertical-align: top;
   border-radius: 100%;

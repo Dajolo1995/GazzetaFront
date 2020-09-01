@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-4 editor">
           <div class="foto">
-            <img class="plastilinaCon" src="@/assets/emily.png" alt="" width="200">
+            <img class="plastilinaCon" src="@/assets/ika.png" alt="" width="200">
           </div>
         </div>
       </div>
@@ -12,7 +12,9 @@
       <div class="row">
         <div class="col-sm- 12 col-md-8 editor">
           <div class="tex">
-             <p>por:<strong class="nombre" style="color: #F65000;"> La niña Emily</strong></p>
+             <p>por:<strong class="nombre" style="color: #F65000;"> Ikkaros</strong></p>
+             <h4 class="tittle">{{Plastilina.titulo}}</h4>
+                <br>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoDos}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoTres}}</p>
@@ -49,7 +51,7 @@ export default {
       try {
         
         const id = this.$route.params.id;
-        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/plastilina/query?_id=${id}`);
+        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/ikkaros/query?_id=${id}`);
         console.clear();
         console.log(res.data);
         this.Plastilina = res.data;

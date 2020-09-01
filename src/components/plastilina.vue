@@ -1,23 +1,22 @@
 <template>
-  <div class="container editorial">  
+  <div class="container editorial">
     <div class="row">
-      <div class="col-md-6 editor">
-        <div class="foto">
-          <img class="fotos" src="@/assets/emily.png" >            
+
+    <!-- Columnistas uno-->
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <b-card
+          style="max-width: 20rem; background-color: #836257;"
+          class="mb-2 uno">
+            <img class="plastilinaCon" src="@/assets/emily.png" alt="" width="200">            
+            <h5 class="cp">{{editorial.titulo}}</h5>
+            <hr>
+            <b-btn variant="link" :to="{name:'plastilinaUno'}" style="color:#000;" >[[Leer...]]</b-btn>
+
+            </b-card>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 editor">
-        <div class="tex">
-          <br>
-          <b-btn  variant="link" :to="{name:'plastilinaUno'}" style="color:#ccc;" ><h4 class="tittle">{{editorial.titulo}}</h4> </b-btn>
-          <p class="fecha">{{editorial.fecha}}</p>   
-        </div>
-      </div>
-    </div>   
-  </div>
-  
+
+    </div>  
+  </div> 
 </template>
 
 

@@ -1,22 +1,25 @@
 <template>
-    <div class="container editorial">  
-        <div class="row">
-            <div class="col-md-6 editor">
-                <div class="foto">
-                  <img src="@/assets/ika.png" >            
-        </div>
-      </div>
-    </div>
-
+  <div class="container editorial">
     <div class="row">
-      <div class="col-md-12 editor">
-        <div class="tex">
-          <b-btn variant="outline-dark" :to="{name:'ikkaros'}" ><h4 class="tittle">{{editorial.titulo}}</h4> </b-btn>
-            <p class="fecha">{{editorial.fecha}}</p>   
-        </div>
+
+    <!-- Columnistas uno-->
+      <div class="col-sm-6 col-md-6 col-lg-3">
+      <div class="estilosMenor">
+        <b-card
+          style="max-width: 20rem; background-color: #e7e7e5;"
+          class="mb-2 uno">
+            <img class="plastilinaCon" src="@/assets/ika.png" alt="" width="200">            
+            <h5 class="cp">{{editorial.titulo}}</h5>
+            <hr>
+            <b-btn variant="link" :to="{name:'ikkaros'}" style="color:#000;" >[[Leer...]]</b-btn>
+
+            </b-card>
       </div>
-    </div>       
-    </div>
+      
+        </div>
+
+    </div>  
+  </div> 
 </template>
 
 
@@ -56,9 +59,36 @@ export default {
 </script>
 
 
+<style>
+.plastilinaa{
+   padding: 70px;
+}
 
+.plasti{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
 
+.fotoPlati{
+    width: 20%;
+    float: left;
+    text-align: right; 
+}
 
+img{
+    max-width: 200px;
+    width: 100%;
+    vertical-align: top;
+    border-radius: 100%;
+}
 
+.fotoPlasti{
+    float: right;
+    text-align: left;
+}
 
-  
+.textplast{
+    float: right;
+    text-align: left;
+}
+</style>

@@ -87,11 +87,28 @@
           </template>
         <b-form-input id="input-small" size="sm" placeholder="Titulo"  v-model="menor.titulo" ></b-form-input>
         <br>
-        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 1" rows="3" max-rows="8" v-model="menor.parrafoUno"  ></b-form-textarea>
+        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 1" rows="3" max-rows="8" v-model="menor.parrafo"  ></b-form-textarea>
         <br>
         <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 2" rows="3" max-rows="8" v-model="menor.parrafoDos"  ></b-form-textarea>
         <br>
         <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 3" rows="3" max-rows="8" v-model="menor.parrafoTres"  ></b-form-textarea>
+        <br>
+        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 4" rows="3" max-rows="8" v-model="menor.parrafoCuatro"  ></b-form-textarea>
+        <br>
+        <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 5" rows="3" max-rows="8" v-model="menor.parrafoCinco "  ></b-form-textarea>
+        <br>
+        <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 6" rows="3" max-rows="8" v-model="menor.parrafoSeis"  ></b-form-textarea>
+        <br>   
+        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 7" rows="3" max-rows="8" v-model="menor.parrafoSiete"  ></b-form-textarea>
+        <br>
+        <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 8" rows="3" max-rows="8" v-model="menor.parrafoOcho"  ></b-form-textarea>
+        <br>
+        <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 9" rows="3" max-rows="8" v-model="menor.parrafoNueve"  ></b-form-textarea>
+        <br>   
+        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 10" rows="3" max-rows="8" v-model="menor.parrafoDiez"  ></b-form-textarea>
+        <br>
+        <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 11" rows="3" max-rows="8" v-model="menor.parrafoOnce"  ></b-form-textarea>
+        <br> 
         <br>        
         <b-form-input id="input-small" size="sm" placeholder="Autor" v-model="menor.autor"  ></b-form-input>
         <b-button variant="light" class="mt-3" @click="crearMenor" >Publicar</b-button>
@@ -336,9 +353,17 @@ export default {
       },
       menor: {
         titulo: "",
-        parrafoUno: "",
-        parrafoDos: "",
-        parrafoTres: "",
+        parrafo:"",
+        parrafoDos:"",
+        parrafotres:"",
+        parrafoCuatro:"",
+        parrafocinco:"",
+        parrafoSeis:"",
+        parrafoSiete:"",
+        parrafoOcho:"",
+        parrafoNueve:"",
+        parrafoDiez:"",
+        parrafoOnce:"",
         autor: "",
         usuariosId: ""
       },

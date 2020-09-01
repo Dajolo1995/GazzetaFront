@@ -24,14 +24,7 @@
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item-dropdown right>
-            <!-- Using 'button-content' slot -->
-            <template v-slot:button-content>
-              <em>User</em>
-            </template>
-            <b-dropdown-item :to="{name:'perfil'}">Profile</b-dropdown-item>
-            <b-dropdown-item :to="{name:'login'}">Sign In</b-dropdown-item>
-          </b-nav-item-dropdown>
+          <b-nav-item :to="{name:'login'}" right > Sign In</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -50,9 +43,10 @@
 
     <div class="redes">
       <div class="social">
-        <a href="https://twitter.com/LosNadieGazetta"><img src="@/assets/gorjeo.png" width="100px"></a>
+        <a class="twitter" href="https://twitter.com/LosNadieGazetta"><img src="@/assets/gorjeo.png" width="100px"></a>
         <br/>
-        <a href="https://www.instagram.com/losnadie27o/"><img src="@/assets/insta.png" width="100px"></a>
+        <br/>
+        <a class="instagram" href="https://www.instagram.com/losnadie27o/"><img src="@/assets/insta.png" width="100px"></a>
 
       </div>
     </div>
@@ -183,6 +177,18 @@ export default {
   right: 20px;
 }
 
+.social:hover{
+  -webkit-animation: tiembla 0.2s 4;
+  -moz-animation: tiembla 0.2s 4;
+  -o-animation: tiembla 0.2s 4;
+ -ms-animation: tiembla 0.2s 4;
+}
+
+@-webkit-keyframes tiembla{
+  0%  { -webkit-transform:rotateZ(-5deg); }
+  50% { -webkit-transform:rotateZ( 0deg) scale(1.4); }
+  100%{ -webkit-transform:rotateZ( 5deg); }
+}
 
 .app {
   background-position: 25% #f5f5f5; 

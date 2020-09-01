@@ -11,34 +11,22 @@
     <div  v-for="(Plastilina, index) in Plastilinas" :key="index">   
 
       <div class="row">
-        <div class="col-md-12 editor">
+        <div class="col-md-4 editor">
           <div class="foto">
-            <img class="plastilina" src="@/assets/ika.png" alt="">
+            <img class="foto" :src="Plastilina.link"> 
           </div>
         </div>
       </div>
-
-
       <div class="row">
-        <div class="col-md-12 editor">
+        <div class="col-md-8 editor">
           <div class="tex">
           <br>
-            <h4 class="tittle">{{Plastilina.titulo}}</h4>  
+            <p style="display: none">❝{{imagen}}❞</p> 
+            <b-btn variant="link" :to="{name:'invi', params: {id: Plastilina._id}}" style="color:#000;"><h4 class="tittle">{{Plastilina.titulo}}</h4> </b-btn> 
             <br/>                   
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoDos}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoTres}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoCuatro}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoCinco}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoSeis}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoSiete}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoOcho}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoNueve}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoDies}}</p>
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoOnce}}</p>          
-            <strong class="nombre" style="color: #F65000;">Ikkaros</strong> 
-          <!--  <b-btn variant="success" :to="{name:'obras', params: {index: Plastilina.titulo}}">leer</b-btn>   -->      
-            <hr>     
+            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}} <b-btn variant="link" :to="{name:'invi', params: {id: Plastilina._id}}" style="color:#000;">[[Leer mas...]]</b-btn> </p>        
+            <p>Escrito por: <strong class="nombre" style="color: #F65000;"> {{Plastilina.autor}}</strong></p>   
+            <hr>
          </div>
         </div>
       </div>
@@ -54,20 +42,55 @@ export default {
   data() {
     return {
       Plastilinas: [],
-      error: ''
+      error: '',
+      imagen: ""
     }
   },
 
   methods: {
     async getPlastilinas(){
       try {
-        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/ikkaros/list`);
+        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/invitado/list`);
         this.Plastilinas = res.data;
+        this.obtImg();
+      console.clear();
+        console.log(res.data);
+
       } catch (error) {
         console.error(error.response);
-        this.error = error.response.data;
+        // this.error = error.response.data;
       }
     },
+      obtImg() {
+
+  
+      this.Plastilinas.forEach(element => {
+        
+        if(element.imagen){
+          axios
+          .get(
+            `${process.env.VUE_APP_RUTA_API}/noticias/obtenerImagen?link=${element.imagen}`,
+            { responseType: "arraybuffer" }
+          )
+          .then(res => {
+            const url = window.URL.createObjectURL(
+              new Blob([res.data], { type: "image/png" })
+            );
+
+            const index = this.Plastilinas.indexOf(element);
+
+            this.Plastilinas[index].link = url;
+            this.imagen = url;
+          })
+          .catch(err => {
+            // this.reporteError = err.response.data;
+            console.error(err);
+          });
+        }
+      });
+    }
+  
+    
   },
 
   mounted() {
@@ -108,13 +131,13 @@ export default {
 }
 .editor{
   overflow: hidden;
-  margin-bottom: 10px;
+
 }
-.imagen{
-  max-width: 100px;
+.foto{
+  max-width: 400px;
   width:100%;
   vertical-align: top;
-  border-radius: 100%;
+  border-radius: 0%;
 }
 
 .tex{

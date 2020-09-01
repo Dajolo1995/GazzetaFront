@@ -3,51 +3,16 @@
     <div class="row">
       <div class="col-md-12">
         <br>
-        <h3 class="pestaña">Los Nadie</h3>
+        <h3 class="pestaña">El Cuento de Hoy</h3>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-8">
-        <b-card-group deck >
-          <b-card style=" background: url('otra.png');"> 
-            <plastilina/>
-          </b-card>  
-        </b-card-group>      
-      </div>
-    </div>
-
-    <hr>
-    <br>
-
-    <div class="row">
-      <div class="col-md-8">
-        <b-card-group deck >
-          <b-card style=" background: url('otra.png');"> 
-              <ikkaros/>
-          </b-card>  
-          </b-card-group>      
-        </div>
-      </div>
-
-     
-      <hr>
-      <br>
-
-      <div class="row">
-        <div class="col-md-8">
-          <b-card-group deck >
-            <b-card style=" background: url('otra.png');"> 
               <Editorial/> 
-            </b-card>  
-          </b-card-group>      
-        </div>
-      </div>
+ 
+            <plastilina/>
+  
+              <ikkaros/>
 
-      
-      <hr>  
-      
-                   
+              <menor/>                 
     <b-container>
       <router-view></router-view>
     </b-container>
@@ -61,9 +26,11 @@
 import Editorial from "@/components/Editorial.vue";
 import plastilina from "@/components/plastilina.vue";
 import ikkaros from "@/components/ikkaros.vue";
+import menor from "@/components/menor.vue";
+
 
 export default {
-  components: { Editorial, plastilina, ikkaros },
+  components: { Editorial, plastilina, ikkaros, menor},
   name: "Home",
   data() {
     return {

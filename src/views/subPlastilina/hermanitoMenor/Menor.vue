@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-4 editor">
           <div class="foto">
-            <img class="plastilinaCon" src="@/assets/emily.png" alt="" width="200">
+            <img class="plastilinaCon" src="@/assets/menor.jpg" alt="" width="200">
           </div>
         </div>
       </div>
@@ -21,10 +21,9 @@
         <div class="col-md-8 editor">
           <div class="tex">
           <br>
-            <b-btn variant="link" :to="{name:'niña-emily', params: {id: Plastilina._id}}" style="color:#000;"><h4 class="tittle">{{Plastilina.titulo}}</h4> </b-btn> 
+            <b-btn variant="link" :to="{name:'menorH', params: {id: Plastilina._id}}" style="color:#000;"><h4 class="tittle">{{Plastilina.titulo}}</h4> </b-btn> 
             <br/>                   
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}}</p>
- 
+            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}} <b-btn variant="link" :to="{name:'ikaros', params: {id: Plastilina._id}}" style="color:#000;">[[Leer mas...]]</b-btn> </p>
             <hr>     
          </div>
         </div>
@@ -48,7 +47,7 @@ export default {
   methods: {
     async getPlastilinas(){
       try {
-        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/plastilina/list`);
+        const res = await axios.get(`${process.env.VUE_APP_RUTA_API}/menor/list`);
         this.Plastilinas = res.data;
 
       console.clear();

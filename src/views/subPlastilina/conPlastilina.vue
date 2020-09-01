@@ -56,9 +56,9 @@
           <!-- Columnistas tres-->
         <div class="col-sm-6 col-md-6 col-lg-3">
           <b-card
-            style="max-width: 20rem; background-color: #e7e7e5;"
+            style="max-width: 20rem; background-color: #b5c1d9;"
             class="mb-2 uno">
-            <img class="plastilinaCon" src="@/assets/ika.png" alt="" width="200">
+            <img class="plastilinaCon" src="@/assets/menor.jpg" alt="" width="200">
             <h2 class="cp">Hermanito Menor</h2>
             <br>
               <b-button :to="{name:'menor'}" variant="outline-dark">Columnas</b-button>
