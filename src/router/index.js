@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Portada from '../views/Portada.vue'
-import notFound from '../views/notFound.vue'
+
 
 import Login from '../views/ingreso/Login.vue'
 import Perfil from '../views/ingreso/Perfil.vue'
@@ -50,6 +50,8 @@ import Memes from '../views/SupPueta/Memes.vue'
 import store from "../store"
 import PaymentSuccess from '../views/payments/PaymentSuccess.vue'
 
+
+import notFound from '../views/notFound.vue'
 
 // import Lita from '../views/subPlastilina/Lita.vue'
 

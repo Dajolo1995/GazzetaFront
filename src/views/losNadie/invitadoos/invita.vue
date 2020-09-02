@@ -13,7 +13,7 @@
           <div class="tex">
              <p>por: <strong class="nombre" style="color: #F65000;"> {{Plastilina.autor}}</strong></p>
              <h4 class="tittle">{{Plastilina.titulo}}</h4>
-                <br>
+              <br>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoDos}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoTres}}</p>
@@ -23,7 +23,7 @@
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoSiete}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoOcho}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoNueve}}</p>
-              <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoDies}}</p>
+              <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoDiez}}</p>
               <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafoOnce}}</p> 
           </div>
         </div>

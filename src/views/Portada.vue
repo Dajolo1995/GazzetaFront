@@ -6,13 +6,17 @@
         <h3 class="pestaña">El Cuento de Hoy</h3>
       </div>
     </div>
+
+          
               <Editorial/> 
  
             <plastilina/>
   
               <ikkaros/>
 
-              <menor/>                 
+              <menor/>  
+
+                  
     <b-container>
       <router-view></router-view>
     </b-container>

@@ -2,7 +2,7 @@
   <div class="container editorial">
     <div class="row">
 
-    <!-- Columnistas uno-->
+    <!-- Columnistas uno
       <div class="col-sm-6 col-md-6 col-lg-3">
       <div class="estilosMenor">
         <b-card
@@ -16,7 +16,7 @@
             </b-card>
       </div>
       
-        </div>
+        </div>-->
 
     </div>  
   </div> 

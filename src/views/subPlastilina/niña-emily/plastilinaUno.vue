@@ -23,7 +23,7 @@
           <br>
             <b-btn variant="link" :to="{name:'niña-emily', params: {id: Plastilina._id}}" style="color:#000;"><h4 class="tittle">{{Plastilina.titulo}}</h4> </b-btn> 
             <br/>                   
-            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}}</p>
+            <p class="texto" style="font-family: 'Special Elite', cursive;">{{Plastilina.parrafo}} <b-btn variant="link" :to="{name:'niña-emily', params: {id: Plastilina._id}}" style="color:#000;">[[leer mas...]]</b-btn></p>
  
             <hr>     
          </div>

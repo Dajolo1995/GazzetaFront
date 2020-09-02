@@ -2,7 +2,7 @@
   <div class="container editorial">
     <div class="row">
       <div class="col-md-12">
-        <h3 class="pestaña">Con Plastilina</h3>
+        <h3 class="pestaña">Invitados</h3>
       </div>
     </div>
     

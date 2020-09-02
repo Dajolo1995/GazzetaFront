@@ -105,7 +105,7 @@
         <br>
         <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 9" rows="3" max-rows="8" v-model="menor.parrafoNueve"  ></b-form-textarea>
         <br>   
-        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 10" rows="3" max-rows="8" v-model="menor.parrafoDiez"  ></b-form-textarea>
+        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 10" rows="3" max-rows="8" v-model="menor.parrafoDies"  ></b-form-textarea>
         <br>
         <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 11" rows="3" max-rows="8" v-model="menor.parrafoOnce"  ></b-form-textarea>
         <br> 
@@ -143,7 +143,7 @@
         <br>
         <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 9" rows="3" max-rows="8" v-model="ikkaros.parrafoNueve"  ></b-form-textarea>
         <br>   
-        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 10" rows="3" max-rows="8" v-model="ikkaros.parrafoDiez"  ></b-form-textarea>
+        <b-form-textarea id="textarea-auto-height" placeholder="parrafo 10" rows="3" max-rows="8" v-model="ikkaros.parrafoDies"  ></b-form-textarea>
         <br>
         <b-form-textarea id="textarea-auto-height" placeholder="Parrafo 11" rows="3" max-rows="8" v-model="ikkaros.parrafoOnce"  ></b-form-textarea>
         <br>                                  
