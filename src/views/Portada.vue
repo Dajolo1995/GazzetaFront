@@ -9,6 +9,8 @@
 
           
               <Editorial/> 
+
+              <invitados/>
  
             <plastilina/>
   
@@ -31,10 +33,11 @@ import Editorial from "@/components/Editorial.vue";
 import plastilina from "@/components/plastilina.vue";
 import ikkaros from "@/components/ikkaros.vue";
 import menor from "@/components/menor.vue";
+import invitados from "@/components/invitados.vue";
 
 
 export default {
-  components: { Editorial, plastilina, ikkaros, menor},
+  components: { Editorial, plastilina, ikkaros, menor, invitados},
   name: "Home",
   data() {
     return {
